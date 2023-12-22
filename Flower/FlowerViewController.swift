@@ -17,7 +17,6 @@ class FlowerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if flowerInfo.prunusmumeSec >= 0 {
-
             prunusmumeTimer = Timer.scheduledTimer(withTimeInterval: flowerInfo.prunusmumeSec, repeats: true) { _ in
                 guard case Int.random(in: self.flowerInfo.prunusmumeRandom...1) = 1 else { return }
                 self.view.addSubview(makePrunusmume(showRandom: true))

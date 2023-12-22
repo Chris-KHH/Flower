@@ -32,6 +32,14 @@ class MenuViewController: UIViewController {
         showDragonfily.addSubview(makeDragonfily(showRandom: false))
     }
 
+    @IBAction func dismissKeyboard(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         msgLabel.text = ""
         
